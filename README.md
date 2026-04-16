@@ -41,6 +41,7 @@ Subnet Mask 255.255.255.0
 Default Gateway 192.168.10.1
 
 Inside Configuration
+
 ![Inside Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20223154.png)
 ---
 ![Inside Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20223021.png)
@@ -79,6 +80,7 @@ access-list 1 permit 192.168.10.0 0.0.0.255
 ip nat inside source list 1 interface gigabitEthernet 0/1 overload
 
 NAT Configuration
+
 ![NAT Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20223706.png)
 ---
 ![NAT Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20224128.png)
@@ -93,6 +95,7 @@ ping 200.1.1.2
 Result successful confirming NAT translation and external reachability
 
 Successful Ping
+
 ![Ping Success](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20224224.png)
 ---
 ![Tracert Success](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20224351.png)
@@ -120,7 +123,8 @@ ping 200.1.1.2
 
 Result failed confirming inability of private IP to reach external network without translation
 
-Screenshot Placeholder NAT Failure
+NAT Failure
+
 ![NAT Failure](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-16%20002343.png)
 ---
 ![Ping Failure](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-16%20002514.png)
