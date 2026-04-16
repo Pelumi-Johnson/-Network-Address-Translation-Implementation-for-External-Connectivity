@@ -234,19 +234,22 @@ ping 200.1.1.2
 
 Result successful confirming NAT translation restored
 
-Screenshot Placeholder NAT Success
-![NAT Success](./screenshots/nat-success.png)
+NAT Success
+![NAT Success](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-16%20010436.png)
 
 ---
 
 
 ## Key Concepts Applied
-Network Address Translation for private to public communication
-Dynamic NAT overload for multiple host translation using single public IP
-Inside and outside interface designation
-ACL usage to define translatable traffic
-End to end connectivity validation using ICMP
-Verification of translation tables for operational visibility
+- Network Address Translation for private to public communication
+- Dynamic NAT overload for multiple host translation using single public IP
+- Inside and outside interface designation
+- ACL usage to define translatable traffic
+- End to end connectivity validation using ICMP
+- Verification of translation tables for operational visibility
+- NAT dependency on correct inside and outside interface designation with dynamic overload (PAT) for multi host translation
+- Use of tracert and verification commands (show ip interface brief and show running-config) to isolate failures beyond the gateway
+- End to end troubleshooting by following packet flow from private network through translation to external destination
 
 ## Outcome
 Enabled external network communication for a private subnet through NAT implementation, allowing internal hosts to access external resources using a single public IP. Validated translation behavior and confirmed dependency on NAT for successful internet communication, reflecting real world enterprise network design.
