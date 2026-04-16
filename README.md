@@ -21,7 +21,7 @@ ISP router simulates internet network
 Logical Flow
 PC to Switch to Internal Router to ISP Router
 
-Screenshot Placeholder Topology
+Topology
 ![Network Topology](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20222826.png)
 
 ## Configuration
@@ -59,7 +59,7 @@ interface gigabitEthernet 0/0
 ip address 200.1.1.2 255.255.255.0
 no shutdown
 
-Screenshot Placeholder Outside Configuration
+Outside Configuration
 ![Outside Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20223610.png)
 
 ### NAT Configuration
@@ -77,8 +77,8 @@ Configured NAT rule using overload for dynamic translation
 access-list 1 permit 192.168.10.0 0.0.0.255
 ip nat inside source list 1 interface gigabitEthernet 0/1 overload
 
-Screenshot Placeholder NAT Configuration
-![NAT Config](./screenshots/nat-config.png)
+NAT Configuration
+![NAT Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20223706.png)
 
 ## Validation
 
