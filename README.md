@@ -78,6 +78,8 @@ access-list 1 permit 192.168.10.0 0.0.0.255
 ip nat inside source list 1 interface gigabitEthernet 0/1 overload
 
 NAT Configuration
+![NAT Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20224128.png)
+---
 ![NAT Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20223706.png)
 
 ## Validation
