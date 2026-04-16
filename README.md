@@ -165,8 +165,8 @@ Failure occurred beyond the gateway
 Conclusion:
 Issue is not Layer 2 or local subnet — problem exists at router translation or outbound path
 
-Screenshot Placeholder Tracert Analysis
-![Tracert Failure](./screenshots/tracert-failure.png)
+Tracert Analysis
+![Tracert Failure](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-16%20010246.png)
 
 ---
 
