@@ -129,6 +129,105 @@ NAT Failure
 ---
 ![Ping Failure](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-16%20002514.png)
 
+---
+
+### Step 1 — Attempted Fix (Still Failed)
+
+Reapplied NAT rule but connectivity still did not work
+
+ping 200.1.1.2
+
+Result failed indicating deeper issue beyond missing NAT rule
+
+Screenshot Placeholder Retry Failure
+![Retry Failure](./screenshots/retry-failure.png)
+
+---
+
+### Step 2 — Path Analysis (Tracing the Failure)
+
+Executed tracert to identify where communication breaks
+
+tracert 200.1.1.2
+
+Observation:
+Packets successfully reached default gateway (192.168.10.1)
+Failure occurred beyond the gateway
+
+Conclusion:
+Issue is not Layer 2 or local subnet — problem exists at router translation or outbound path
+
+Screenshot Placeholder Tracert Analysis
+![Tracert Failure](./screenshots/tracert-failure.png)
+
+---
+
+### Step 3 — Interface Verification
+
+Checked interface status
+
+show ip interface brief
+
+Observation:
+All interfaces are up and operational
+
+Conclusion:
+Physical and Layer 3 interface states are not the issue
+
+Screenshot Placeholder Interface Check
+![Interface Status](./screenshots/interface-check.png)
+
+---
+
+### Step 4 — Configuration Inspection (Root Cause Discovery)
+
+Reviewed full configuration
+
+show running-config
+
+Observation:
+- g0/0 correctly configured with ip nat inside
+- g0/1 missing ip nat outside
+
+Root Cause Identified:
+NAT requires both inside and outside interfaces
+Missing ip nat outside prevents translation entirely
+
+Screenshot Placeholder Config Review
+![Running Config](./screenshots/running-config.png)
+
+---
+
+### Step 5 — Fix Applied
+
+Configured outside interface correctly
+
+interface gigabitEthernet 0/1
+ip nat outside
+
+Reapplied NAT rule
+
+ip nat inside source list 1 interface gigabitEthernet 0/1 overload
+
+Screenshot Placeholder NAT Fix Config
+![NAT Fix Config](./screenshots/nat-fix-config.png)
+
+---
+
+### Step 6 — Final Validation
+
+Retested connectivity
+
+ping 200.1.1.2
+
+Result successful confirming NAT translation restored
+
+Screenshot Placeholder NAT Success
+![NAT Success](./screenshots/nat-success.png)
+
+---
+
+
 ## Key Concepts Applied
 Network Address Translation for private to public communication
 Dynamic NAT overload for multiple host translation using single public IP
