@@ -60,7 +60,7 @@ ip address 200.1.1.2 255.255.255.0
 no shutdown
 
 Screenshot Placeholder Outside Configuration
-![Outside Config](./screenshots/outside-config.png)
+![Outside Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20223610.png)
 
 ### NAT Configuration
 
