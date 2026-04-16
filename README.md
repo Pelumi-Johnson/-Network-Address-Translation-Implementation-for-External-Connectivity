@@ -114,7 +114,7 @@ Confirmed private IP was translated to public interface address
 NAT Table
 ![NAT Table](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-16%20003326.png)
 
-## Failure Testing
+## Failure Testing ❌
 
 Removed NAT configuration to simulate loss of translation
 
@@ -135,7 +135,7 @@ NAT Failure
 
 ---
 
-### Step 1 — Attempted Fix (Still Failed)
+### Step 1 — Attempted Fix (Still Failed) 🛠️
 
 Reapplied NAT rule but connectivity still did not work
 
