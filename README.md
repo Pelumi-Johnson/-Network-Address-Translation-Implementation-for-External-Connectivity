@@ -217,8 +217,8 @@ Reapplied NAT rule
 
 ip nat inside source list 1 interface gigabitEthernet 0/1 overload
 
-Screenshot Placeholder NAT Fix Config
-![NAT Fix Config](./screenshots/nat-fix-config.png)
+NAT Fix Config
+![NAT Fix Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-16%20010358.png)
 
 ---
 
