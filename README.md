@@ -222,6 +222,10 @@ NAT Fix Config
 
 ---
 
+![NAT Fix Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-16%20010414.png)
+
+---
+
 ### Step 6 — Final Validation
 
 Retested connectivity
