@@ -201,8 +201,8 @@ Root Cause Identified:
 NAT requires both inside and outside interfaces
 Missing ip nat outside prevents translation entirely
 
-Screenshot Placeholder Config Review
-![Running Config](./screenshots/running-config.png)
+Config Review
+![Running Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-16%20010341.png)
 
 ---
 
