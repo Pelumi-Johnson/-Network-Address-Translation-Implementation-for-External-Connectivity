@@ -105,7 +105,7 @@ show ip nat translations
 
 Confirmed private IP was translated to public interface address
 
-Screenshot Placeholder NAT Table
+NAT Table
 ![NAT Table](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-16%20003326.png)
 
 ## Failure Testing
@@ -121,7 +121,7 @@ ping 200.1.1.2
 Result failed confirming inability of private IP to reach external network without translation
 
 Screenshot Placeholder NAT Failure
-![NAT Failure](./screenshots/nat-failure.png)
+![NAT Failure](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-16%20002343.png)
 
 ## Key Concepts Applied
 Network Address Translation for private to public communication
