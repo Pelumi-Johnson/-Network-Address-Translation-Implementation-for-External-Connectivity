@@ -139,8 +139,8 @@ ping 200.1.1.2
 
 Result failed indicating deeper issue beyond missing NAT rule
 
-Screenshot Placeholder Retry Failure
-![Retry Failure](./screenshots/retry-failure.png)
+Retry Failure
+![Retry Failure](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-16%20010145.png)
 
 ---
 
