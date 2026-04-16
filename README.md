@@ -22,7 +22,7 @@ Logical Flow
 PC to Switch to Internal Router to ISP Router
 
 Screenshot Placeholder Topology
-![Network Topology](./screenshots/topology.png)
+![Network Topology](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20222826.png)
 
 ## Configuration
 
