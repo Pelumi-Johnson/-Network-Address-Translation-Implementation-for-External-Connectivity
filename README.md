@@ -92,8 +92,10 @@ ping 200.1.1.2
 
 Result successful confirming NAT translation and external reachability
 
-Screenshot Placeholder Successful Ping
+Successful Ping
 ![Ping Success](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20224224.png)
+---
+![Tracert Success](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20224351.png)
 
 ### NAT Translation Verification
 
