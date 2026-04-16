@@ -182,8 +182,8 @@ All interfaces are up and operational
 Conclusion:
 Physical and Layer 3 interface states are not the issue
 
-Screenshot Placeholder Interface Check
-![Interface Status](./screenshots/interface-check.png)
+Interface Check
+![Interface Status](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-16%20010318.png)
 
 ---
 
