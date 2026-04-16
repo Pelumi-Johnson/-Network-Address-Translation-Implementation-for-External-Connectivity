@@ -226,7 +226,7 @@ NAT Fix Config
 
 ---
 
-### Step 6 — Final Validation
+### Step 6 — Final Validation ✅
 
 Retested connectivity
 
