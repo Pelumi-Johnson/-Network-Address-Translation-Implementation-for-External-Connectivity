@@ -40,8 +40,10 @@ IP 192.168.10.10
 Subnet Mask 255.255.255.0
 Default Gateway 192.168.10.1
 
-Screenshot Placeholder Inside Configuration
-![Inside Config](./screenshots/inside-config.png)
+Inside Configuration
+![Inside Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20223021.png)
+---
+![Inside Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20223021.png)
 
 ### Outside Network Configuration
 
