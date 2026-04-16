@@ -106,7 +106,7 @@ show ip nat translations
 Confirmed private IP was translated to public interface address
 
 Screenshot Placeholder NAT Table
-![NAT Table](./screenshots/nat-table.png)
+![NAT Table](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-16%20003326.png)
 
 ## Failure Testing
 
