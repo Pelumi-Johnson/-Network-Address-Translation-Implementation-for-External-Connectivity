@@ -5,18 +5,18 @@ Designed and implemented Network Address Translation to enable a private interna
 
 ## Objective
 Established external connectivity for a private network by implementing NAT, allowing internal hosts to communicate with external networks through address translation.
-
+```
 ## Network Setup
 Devices Used
 1 Cisco 2960 Switch
 2 Cisco 1941 Routers
 1 End Device PC
-
+```
 Topology Design
-PC connected to switch inside network
-Switch connected to primary router internal interface
-Primary router connected to ISP router via external interface
-ISP router simulates internet network
+- PC connected to switch inside network
+- Switch connected to primary router internal interface
+- Primary router connected to ISP router via external interface
+- ISP router simulates internet network
 
 Logical Flow
 PC to Switch to Internal Router to ISP Router
@@ -29,17 +29,17 @@ Topology
 ### Inside Network Configuration
 
 Configured internal interface on router and assigned private IP range
-
+```
 interface gigabitEthernet 0/0
 ip address 192.168.10.1 255.255.255.0
 no shutdown
-
+```
 Configured end device with private addressing
-
+```
 IP 192.168.10.10
 Subnet Mask 255.255.255.0
 Default Gateway 192.168.10.1
-
+```
 Inside Configuration
 ![Inside Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20223154.png)
 
@@ -51,35 +51,35 @@ Inside Configuration
 ### Outside Network Configuration
 
 Configured external interface on primary router with public IP
-
+```
 interface gigabitEthernet 0/1
 ip address 200.1.1.1 255.255.255.0
 no shutdown
-
+```
 Configured ISP router interface
-
+```
 interface gigabitEthernet 0/0
 ip address 200.1.1.2 255.255.255.0
 no shutdown
-
+```
 Outside Configuration
 ![Outside Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20223610.png)
 
 ### NAT Configuration
 
 Defined inside and outside interfaces
-
+```
 interface gigabitEthernet 0/0
 ip nat inside
 
 interface gigabitEthernet 0/1
 ip nat outside
-
+```
 Configured NAT rule using overload for dynamic translation
-
+```
 access-list 1 permit 192.168.10.0 0.0.0.255
 ip nat inside source list 1 interface gigabitEthernet 0/1 overload
-
+```
 NAT Configuration
 ![NAT Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-15%20223706.png)
 
@@ -91,9 +91,9 @@ NAT Configuration
 ### Connectivity Testing
 
 Tested communication from internal host to external network
-
+```
 ping 200.1.1.2
-
+```
 Result successful confirming NAT translation and external reachability
 
 Successful Ping
@@ -117,13 +117,13 @@ NAT Table
 ## Failure Testing ⚠️
 
 Removed NAT configuration to simulate loss of translation
-
+```
 no ip nat inside source list 1 interface gigabitEthernet 0/1 overload
-
+```
 Retested connectivity
-
+```
 ping 200.1.1.2
-
+```
 Result failed confirming inability of private IP to reach external network without translation
 
 NAT Failure ❌
@@ -138,9 +138,9 @@ NAT Failure ❌
 ### Step 1 — Attempted Fix (Still Failed) 🛠️
 
 Reapplied NAT rule but connectivity still did not work
-
+```
 ping 200.1.1.2
-
+```
 Result failed indicating deeper issue beyond missing NAT rule
 
 Retry Failure
@@ -155,9 +155,9 @@ Retry Failure
 ### Step 2 — Path Analysis (Tracing the Failure)
 
 Executed tracert to identify where communication breaks
-
+```
 tracert 200.1.1.2
-
+```
 Observation:
 Packets successfully reached default gateway (192.168.10.1)
 Failure occurred beyond the gateway
@@ -173,9 +173,9 @@ Tracert Analysis
 ### Step 3 — Interface Verification
 
 Checked interface status
-
+```
 show ip interface brief
-
+```
 Observation:
 All interfaces are up and operational
 
@@ -190,9 +190,9 @@ Interface Check
 ### Step 4 — Configuration Inspection (Root Cause Discovery)
 
 Reviewed full configuration
-
+```
 show running-config
-
+```
 Observation:
 - g0/0 correctly configured with ip nat inside
 - g0/1 missing ip nat outside
@@ -209,14 +209,14 @@ Config Review
 ### Step 5 — Fix Applied
 
 Configured outside interface correctly
-
+```
 interface gigabitEthernet 0/1
 ip nat outside
-
+```
 Reapplied NAT rule
-
+```
 ip nat inside source list 1 interface gigabitEthernet 0/1 overload
-
+```
 NAT Fix Config
 ![NAT Fix Config](https://github.com/Pelumi-Johnson/-Network-Address-Translation-Implementation-for-External-Connectivity/blob/main/Screenshot%202026-04-16%20010358.png)
 
@@ -229,9 +229,9 @@ NAT Fix Config
 ### Step 6 — Final Validation 
 
 Retested connectivity
-
+```
 ping 200.1.1.2
-
+```
 Result successful confirming NAT translation restored
 
 NAT Success ✅
